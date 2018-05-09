@@ -119,6 +119,10 @@ bash /vagrant/provision/kubernetes.sh "$3"
 
 systemctl start kube-apiserver kube-controller-manager kube-scheduler kube-proxy kubelet &
 
+bash /vagrant/provision/keepalived.sh
+
+systemctl start keepalived &
+
         SHELL
         s.args = [i, vm_name, ip, ETCD_INITIAL_CLUSTER]    # 脚本中使用 $1, $2, $3... 读取
       end
