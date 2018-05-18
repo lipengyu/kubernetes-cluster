@@ -87,7 +87,7 @@ swapoff -a
 sed -i '/swap/{ s|^|#| }' /etc/fstab
 
 #yum -y update
-yum -y install tcpdump ipvsadm
+yum -y install tcpdump
 
   SHELL
 
