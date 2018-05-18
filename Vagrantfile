@@ -86,6 +86,9 @@ sed -i 's|^SELINUX=.*|SELINUX=disabled|' /etc/selinux/config
 swapoff -a
 sed -i '/swap/{ s|^|#| }' /etc/fstab
 
+#yum -y update
+yum -y install tcpdump
+
   SHELL
 
   # 根据节点的主机名和IP，生成 ETCD_INITIAL_CLUSTER
