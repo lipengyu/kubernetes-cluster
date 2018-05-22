@@ -30,5 +30,8 @@ Environment="HTTPS_PROXY=${HTTPS_PROXY}"
 Environment="NO_PROXY=${NO_PROXY}"
 EOF
 
+mkdir /etc/docker
+cp ${LOCATION_PATH}/etc/docker/daemon.json /etc/docker/
+
 systemctl daemon-reload
 systemctl enable docker
