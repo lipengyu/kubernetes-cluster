@@ -1,4 +1,4 @@
 *
 !.gitignore
-!config.cnf
-!cmd.txt
+!*.cnf
+!*.md
