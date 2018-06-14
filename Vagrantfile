@@ -69,6 +69,7 @@ cat >/etc/profile.d/zzz_no_proxy.sh <<\EOF
 # Named 'zzz_no_proxy.sh', so it will be loaded finally, and overwrite Env variable 'no_proxy'.
 export no_proxy=\\$(echo 172.17.0.{1..255} | sed "s/ /,/g")
 export no_proxy=\\${no_proxy},10.0.2.2,10.0.2.15,127.0.0.1,localhost,.example.com
+export no_proxy=\\${no_proxy},172.17.0.100,172.17.0.101,172.17.0.102,172.17.0.103,10.254.0.1
 EOF
 source /etc/profile.d/zzz_no_proxy.sh &>/dev/null
 
